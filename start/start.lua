@@ -44,7 +44,7 @@ _G.touchpointLocation = {}
 
 --===== Functions for loading and saving the options =====
 
-local repoUrl = "https://gitlab.com/seekerscomputercraft/extremereactorcontrol/-/raw/"
+local repoUrl = "https://github.com/pootchies/extremereactorcontrol/raw/"
 
 function _G.debugOutput(message) 
 	if debug == 1 then
@@ -274,7 +274,7 @@ function _G.initPeripherals()
 	local peripheralList = peripheral.getNames()
 	for i = 1, #peripheralList do
 		--Turbines
-		if peripheral.getType(peripheralList[i]) == "bigger-turbine" then
+		if peripheral.getType(peripheralList[i]) == "BigReactors-turbine" then
 			print("Turbine - "..peripheralList[i])
 			_G.turbines[amountTurbines] = peripheral.wrap(peripheralList[i])
 			_G.amountTurbines = amountTurbines + 1
