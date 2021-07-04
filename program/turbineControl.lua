@@ -167,32 +167,6 @@ function startManualMode()
     clickEvent()
 end
 
---Checks if all required peripherals are attached
-function checkPeripherals()
-    controlMonitor.setBackgroundColor(colors.black)
-    controlMonitor.clear()
-    controlMonitor.setCursorPos(1, 1)
-    controlMonitor.setTextColor(colors.red)
-    term.clear()
-    term.setCursorPos(1, 1)
-    term.setTextColor(colors.red)
-    --No turbine found
-    if turbines[0] == nil then
-        controlMonitor.write("Turbines not found! Please check and reboot the computer (Press and hold Ctrl+R)")
-        error("Turbines not found! Please check and reboot the computer (Press and hold Ctrl+R)")
-    end
-    --No reactor found
-    if reactors[0] == "" then
-        controlMonitor.write("Reactor not found! Please check and reboot the computer (Press and hold Ctrl+R)")
-        error("Reactor not found! Please check and reboot the computer (Press and hold Ctrl+R)")
-    end
-    --No energy storage found
-    if capacitors[0] == nill then
-        controlMonitor.write("Energy Storage not found! Please check and reboot the computer (Press and hold Ctrl+R)")
-        error("Energy Storage not found! Please check and reboot the computer (Press and hold Ctrl+R)")
-    end
-end
-
 function getEnergy()
     local energyStore = 0
 
