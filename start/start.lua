@@ -274,12 +274,12 @@ function _G.initPeripherals()
 	local peripheralList = peripheral.getNames()
 	for i = 1, #peripheralList do
 		--Turbines
-		if peripheral.getType(peripheralList[i]) == "BigReactors-Turbine" then
+		if peripheral.getType(peripheralList[i]) == "bigger-turbine" then
 			print("Turbine - "..peripheralList[i])
 			_G.turbines[amountTurbines] = peripheral.wrap(peripheralList[i])
 			_G.amountTurbines = amountTurbines + 1
 			--Reactor
-		elseif peripheral.getType(peripheralList[i]) == "BigReactors-Reactor" then
+		elseif peripheral.getType(peripheralList[i]) == "bigger-reactor" then
 			print("Reactor - "..peripheralList[i])
 			_G.reactors[amountReactors] = peripheral.wrap(peripheralList[i])
 			_G.amountReactors = amountReactors + 1
